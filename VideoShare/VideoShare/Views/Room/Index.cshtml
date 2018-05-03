@@ -1,0 +1,54 @@
+﻿@model IEnumerable<VideoShare.Models.RoomModels>
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+
+@{
+    ViewBag.Title = "All Rooms - Admin View";
+}
+
+<h2>All Rooms - Admin View</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomOwner)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomOwner)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RoomID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RoomID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RoomID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<VideoShare.Models.ApplicationUser>
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+
+@{
+    ViewBag.Title = "All Users - SIT";
+}
+
+<h2>All Users - Admin View</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            User
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.Email != "Admin@email.com")
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    }
+
+</table>

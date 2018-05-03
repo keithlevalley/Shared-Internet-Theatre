@@ -1,0 +1,45 @@
+﻿@model IEnumerable<VideoShare.Models.RoomModels>
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+
+    @{
+        ViewBag.Title = "Details - SIT";
+    }
+
+    <h2>Details</h2>
+
+    <div>
+        <h4>UserModels</h4>
+        <hr />
+        <dl class="dl-horizontal">
+     
+        </dl>
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomOwner)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RoomID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RoomID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RoomID })
+            </td>
+        </tr>
+    }
+
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>

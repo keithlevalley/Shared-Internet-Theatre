@@ -1,0 +1,34 @@
+﻿@model VideoShare.Models.RoomModels
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+
+@{
+    ViewBag.Title = "Home - SIT";
+}
+
+<div class="jumbotron">
+    <h1>Shared Internet Theatre</h1>
+    <p class="lead">Never let distance come between you.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Your Room</h2>
+        <p>
+            Check what rooms you have created.
+        </p>
+        <p><a class="btn btn-default" @Html.ActionLink("Your Room", "Account", "User")</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Join Room</h2>
+        <p>Join a room by entering the room code.</p>
+
+        @using (Html.BeginForm("Lookup", "Room", FormMethod.Post))
+        {
+            @Html.TextBoxFor(model => model.RoomCode)
+            @Html.ValidationMessageFor(model => model.RoomCode)
+            <button type="submit">Room</button>
+        }
+    </div>
+</div>

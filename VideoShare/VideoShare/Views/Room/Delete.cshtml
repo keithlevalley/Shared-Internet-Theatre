@@ -1,0 +1,59 @@
+﻿@model VideoShare.Models.RoomModels
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+
+@{
+    ViewBag.Title = "Delete - SIT";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>RoomModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomOwner)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" id="al">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

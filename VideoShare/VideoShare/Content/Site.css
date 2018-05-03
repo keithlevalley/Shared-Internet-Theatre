@@ -1,0 +1,91 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* MISCELLANEOUS */
+.dl-horizontal, th, tr, td, p, footer, #al, input, #css_purposes {
+    font-size: 12px;
+}
+
+h2 {
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.navbar {
+    background: #2fa4e7;
+    color: #808080
+}
+
+.brand-text, .nav.navbar-nav li a, .nav.navbar-nav.navbar-right li a {
+    color: #e9ecef;
+}
+
+    .brand-text:hover, .nav.navbar-nav li a:hover, .nav.navbar-nav.navbar-right li a:hover {
+        color: #ffffff;
+    }
+
+.jumbotron {
+    color: #696969;
+}
+/* END MISCELLANEOUS */
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* CHAT BOX */
+.chatbox {
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    height: 480px;
+    width: 250px;
+    border: 1px solid #868e96;
+    float:right;
+    padding-right: 0px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+    .chatbox .container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .chatbox #message {
+        width: 170px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+    }
+
+    .chatbox ul {
+        list-style-type: none;
+        margin-left: -50px;
+        word-wrap: break-word;
+        height: 100px;
+    }
+/* END CHAT BOX */
